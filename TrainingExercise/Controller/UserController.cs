@@ -10,22 +10,22 @@ namespace TrainingExercise.Controller
             new User
             {
                 Id = 1,
-                Name = "Mohammad",
-                DateOfBirth = new DateOnly(1987, 5, 16),
-                Address = "Yatta, Palestine",
+                Name = "Zaid",
+                DateOfBirth = new DateOnly(2016, 3, 7),
+                Address = "Hebron, Palestine",
             },
             new User
             {
                 Id = 2,
-                Name = "Amani",
-                DateOfBirth = new DateOnly(1988, 2, 25),
+                Name = "Ghazal",
+                DateOfBirth = new DateOnly(2018, 9, 18),
                 Address = "Hebron, Palestine",
             },
             new User
             {
                 Id = 3,
-                Name = "Zaid",
-                DateOfBirth = new DateOnly(2016, 3, 7),
+                Name = "Nagham",
+                DateOfBirth = new DateOnly(2020, 11, 12),
                 Address = "Ramallah, Palestine",
             }
                    };
