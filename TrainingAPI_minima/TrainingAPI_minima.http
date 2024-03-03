@@ -1,0 +1,6 @@
+@TrainingAPI_minima_HostAddress = http://localhost:5101
+
+GET {{TrainingAPI_minima_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

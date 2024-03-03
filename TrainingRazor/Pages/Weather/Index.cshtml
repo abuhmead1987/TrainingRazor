@@ -1,0 +1,34 @@
+﻿@page
+@model TrainingRazor.Pages.Weather.IndexModel
+@using TrainingAPI.Controllers
+@{
+    string htmlContent = "<strong>This is bold</strong>";
+    string arabicHtml = "<strong>السلام عليكم ورحمة الله وبركاته</strong>";
+}
+<p>@Html.Raw(@htmlContent)</p>
+<p>@arabicHtml</p>
+
+@functions{
+    public class City
+        {
+    public string Name { get; set; }
+    public int Temperature { get; set; }
+    public int Humidity { get; set; }
+        }
+        public List<City> Cities = new List<City>()
+        {
+            new City { Name = "London", Temperature = 15, Humidity = 60 },
+            new City { Name = "Paris", Temperature = 20, Humidity = 70 },
+            new City { Name = "New York", Temperature = 25, Humidity = 80 },
+        };
+}
+<h1>Index</h1>
+@foreach (var city in Cities)
+{
+    <h2>@city.Name</h2>
+    @:city details
+    <p>Temperature: @city.Temperature</p>
+    <p>Humidity: @city.Humidity</p>
+}
+
+

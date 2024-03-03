@@ -1,0 +1,5 @@
+﻿{
+  "Id": "extra_appsettings",
+  "ConnectionString": "Data Source=extra_appsettings.db",
+  "Database": "extra_appsettings.db"
+}

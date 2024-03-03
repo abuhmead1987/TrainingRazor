@@ -1,0 +1,22 @@
+﻿@page
+@model TrainingExercise.Pages.UserPages.UserDetailsModel
+@using TrainingExercise.Controller
+@using TrainingExercise.Model
+@{
+    ViewData["Title"] = "User Details";
+    User user = UserController.GetUser(Model.UserId);
+}
+@functions{
+    int CalculateAge(DateOnly dateOfBirth)
+    {
+        return DateTime.Now.Year - dateOfBirth.Year;
+    }
+}
+
+<h1>User Details</h1>
+
+<p>Id: @user.Id</p>
+<p>Name: @user.Name</p>
+<p>Date of Birth: @user.DateOfBirth</p>
+<p>Age: @CalculateAge(user.DateOfBirth)</p>
+<p>Age: @user.Address</p>

@@ -1,0 +1,40 @@
+﻿@page
+@using TrainingExercise.Controller
+@using TrainingExercise.Model
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    List<User> users = UserController.users;
+    }
+
+ 
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <table class="table table-striped table-bordered">
+        <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Date of birth</th>
+        <th>Address</th>
+        <th>Actions <a href="UserPages/UserCreate" class="btn btn-outline-primary">Add new User</a></th>
+        </thead>
+        <tbody>
+        </tbody>
+        @foreach (var user in users)
+        {
+            <tr>
+                <td> @user.Id</td>
+                <td> @user.Name</td>
+                <td> @user.DateOfBirth</td>
+                <td> @user.Address</td>
+                <td>
+                    <a href="UserPages/UserDetails?id=@user.Id" class="btn btn-outline-success">Details</a>   &nbsp;
+                    <a href="UserPages/UserUpdate?id=@user.Id" class="btn btn-outline-dark">Update</a>  &nbsp;
+                    <a href="UserPages/UserDelete?id=@user.Id" class="btn btn-outline-danger">Delete</a>
+                </td>
+            </tr>
+
+        }
+    </table>
+
+</div>

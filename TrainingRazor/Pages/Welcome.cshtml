@@ -1,0 +1,32 @@
+﻿@page
+@model TrainingRazor.Pages.WelcomeModel
+@{
+    
+}
+
+<h1>Hello, world!</h1>
+@* Display the current date and time and the time zone and show it as clock*@
+<h2>@DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss")</h2>
+<h2>@TimeZoneInfo.Local.StandardName</h2>
+
+  <div id="clock" style="font-size: 48px;"></div>
+
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var timeString = hours.toString().padStart(2, '0') + ':' +
+                             minutes.toString().padStart(2, '0') + ':' +
+                             seconds.toString().padStart(2, '0');
+            document.getElementById('clock').innerHTML = timeString;
+        }
+
+        // Call updateClock every second
+        setInterval(updateClock, 1000);
+
+        // Initial call to display the clock immediately
+        updateClock();
+    </script>
+
