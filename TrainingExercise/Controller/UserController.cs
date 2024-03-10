@@ -7,27 +7,36 @@ namespace TrainingExercise.Controller
         public static readonly List<User> users =
             new List<User>
                    {
-            new User
-            {
-                Id = 1,
-                Name = "Zaid",
-                DateOfBirth = new DateOnly(2016, 3, 7),
-                Address = "Hebron, Palestine",
-            },
-            new User
-            {
-                Id = 2,
-                Name = "Ghazal",
-                DateOfBirth = new DateOnly(2018, 9, 18),
-                Address = "Hebron, Palestine",
-            },
-            new User
-            {
-                Id = 3,
-                Name = "Nagham",
-                DateOfBirth = new DateOnly(2020, 11, 12),
-                Address = "Ramallah, Palestine",
-            }
+                    //Sample data
+                    new User
+                    {
+                        Id = 0,
+                        Email = "Zaid@gmail.com",
+                        Password = "123456",
+                        UserName = "Zaid"
+                    }
+
+                    //new User
+                    //{
+                    //    Id = 1,
+                    //    Name = "Zaid",
+                    //    DateOfBirth = new DateOnly(2016, 3, 7),
+                    //    Address = "Hebron, Palestine",
+                    //},
+                    //new User
+                    //{
+                    //    Id = 2,
+                    //    Name = "Ghazal",
+                    //    DateOfBirth = new DateOnly(2018, 9, 18),
+                    //    Address = "Hebron, Palestine",
+                    //},
+                    //new User
+                    //{
+                    //    Id = 3,
+                    //    Name = "Nagham",
+                    //    DateOfBirth = new DateOnly(2020, 11, 12),
+                    //    Address = "Ramallah, Palestine",
+                    //}
                    };
 
         //Get user using id

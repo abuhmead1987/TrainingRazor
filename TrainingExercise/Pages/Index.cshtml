@@ -23,14 +23,14 @@
         @foreach (var user in users)
         {
             <tr>
-                <td> @user.Id</td>
+               @*  <td> @user.Id</td>
                 <td> @user.Name</td>
                 <td> @user.DateOfBirth</td>
-                <td> @user.Address</td>
+                <td> @user.Address</td> *@
                 <td>
-                    <a href="UserPages/UserDetails?id=@user.Id" class="btn btn-outline-success">Details</a>   &nbsp;
-                    <a href="UserPages/UserUpdate?id=@user.Id" class="btn btn-outline-dark">Update</a>  &nbsp;
-                    <a href="UserPages/UserDelete?id=@user.Id" class="btn btn-outline-danger">Delete</a>
+@*                     <a asp-page="UserPages/UserDetails" asp-route-id="@user.Id" asp-route-Controller="hi from Controller" asp-route-data="@user.Address" class="btn btn-outline-success">Details</a>   &nbsp;
+ *@                    <a asp-page="UserPages/UserUpdate" asp-route-id="@user.Id" class="btn btn-outline-dark">Update</a>  &nbsp;
+                    <a asp-page="UserPages/UserDelete" asp-route-id="@user.Id" class="btn btn-outline-danger">Delete</a>
                 </td>
             </tr>
 

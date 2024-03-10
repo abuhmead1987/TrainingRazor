@@ -14,13 +14,13 @@ namespace TrainingExercise.Pages.UserPages
         public IActionResult OnPost()
         {
 
-            User user = new User()
-            {
-                Name = Request.Form["name"],
-                Address = Request.Form["Address"],
-                DateOfBirth = DateOnly.Parse(Request.Form["DateOfBirth"]),
-            };
-                UserController.AddUser(user);
+            //User user = new User()
+            //{
+            //    Name = Request.Form["name"],
+            //    Address = Request.Form["Address"],
+            //    DateOfBirth = DateOnly.Parse(Request.Form["DateOfBirth"]),
+            //};
+            //UserController.AddUser(user);
             return Redirect("/Index");
         }
     }

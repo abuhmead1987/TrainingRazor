@@ -17,16 +17,17 @@ namespace TrainingExercise.Pages.UserPages
         public IActionResult OnPost()
         {
 
-            User user = new User()
-            {
-                Id =Int16.Parse (Request.Form["Id"]),
-                Name = Request.Form["name"],
-                Address = Request.Form["Address"],
-                DateOfBirth = DateOnly.Parse (Request.Form["DateOfBirth"]),
-            };
-                UserController.UpdateUser(user);
+            //User user = new User()
+            //{
+            //    Id =Int16.Parse (Request.Form["Id"]),
+            //    Name = Request.Form["name"],
+            //    Address = Request.Form["Address"],
+            //    DateOfBirth = DateOnly.Parse (Request.Form["DateOfBirth"]),
+            //};
+                //UserController.UpdateUser(user);
             //return Redirect($"/UserPages/UserDetails?id={user.Id}") ;
-            return Redirect("/UserPages/UserDetails?id=" + user.Id);
+            //return Redirect("/UserPages/UserDetails?id=" + user.Id);
+            return null;
         }
     }
 }
